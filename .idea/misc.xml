@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/button_round.xml" value="0.166" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/ic_battle_battle.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/ic_battles_logo_filled.xml" value="0.128" />
+        <entry key="app/src/main/res/drawable/ic_chart_24dp.xml" value="0.1575" />
+        <entry key="app/src/main/res/drawable/ic_chat_24dp.xml" value="0.1575" />
+        <entry key="app/src/main/res/drawable/ic_like.xml" value="0.166" />
+        <entry key="app/src/main/res/drawable/ic_next.xml" value="0.1575" />
+        <entry key="app/src/main/res/drawable/ic_plus.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/navi_btn_color.xml" value="0.128" />
+        <entry key="app/src/main/res/layout/activity_board.xml" value="0.2345295030700147" />
+        <entry key="app/src/main/res/layout/activity_comment.xml" value="0.31737823486328126" />
+        <entry key="app/src/main/res/layout/activity_edit_profile.xml" value="0.14791666666666667" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.17856903076171876" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_register_mission.xml" value="0.14791666666666667" />
+        <entry key="app/src/main/res/layout/activity_writing.xml" value="0.195538330078125" />
+        <entry key="app/src/main/res/layout/battle_join_item.xml" value="0.15677083333333333" />
+        <entry key="app/src/main/res/layout/board_overview_custom_item.xml" value="0.39957275390625" />
+        <entry key="app/src/main/res/layout/club_join_item.xml" value="0.15677083333333333" />
+        <entry key="app/src/main/res/layout/fragment_battle.xml" value="0.35125115848007415" />
+        <entry key="app/src/main/res/layout/fragment_battle_join.xml" value="0.18115942028985507" />
+        <entry key="app/src/main/res/layout/fragment_board.xml" value="0.3584335327148438" />
+        <entry key="app/src/main/res/layout/fragment_challenge.xml" value="0.14791666666666667" />
+        <entry key="app/src/main/res/layout/fragment_challenge_list.xml" value="0.34361822155938637" />
+        <entry key="app/src/main/res/layout/fragment_challenge_upload.xml" value="0.15677083333333333" />
+        <entry key="app/src/main/res/layout/fragment_chart.xml" value="0.27357025146484376" />
+        <entry key="app/src/main/res/layout/fragment_club_join.xml" value="0.18115942028985507" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3409090909090909" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.26379801432291666" />
+        <entry key="app/src/main/res/layout/home_button_custom.xml" value="0.14791666666666667" />
+        <entry key="app/src/main/res/layout/image_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_challenge.xml" value="0.45157165527343757" />
+        <entry key="app/src/main/res/layout/item_mission.xml" value="0.3959136962890625" />
+        <entry key="app/src/main/res/layout/item_mission_candidate.xml" value="0.27573191324869795" />
+        <entry key="app/src/main/res/layout/item_mission_summary.xml" value="0.42417551676432297" />
+        <entry key="app/src/main/res/layout/item_overview.xml" value="0.3720087687174479" />
+        <entry key="app/src/main/res/layout/profile_item.xml" value="0.18115942028985507" />
+        <entry key="app/src/main/res/layout/signup_bottom_sheet_layout.xml" value="0.15677083333333333" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1171875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

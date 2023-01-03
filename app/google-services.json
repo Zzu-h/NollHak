@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "712018069232",
+    "project_id": "jureumuing",
+    "storage_bucket": "jureumuing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712018069232:android:5253c8e627f5c5ff2f2435",
+        "android_client_info": {
+          "package_name": "com.hackerton.jureumuing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712018069232-csps7erp816k4usphf55nl23vlds69sg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hackerton.jureumuing",
+            "certificate_hash": "4563174cd49c4bd91ff86e9127c30b562850a32d"
+          }
+        },
+        {
+          "client_id": "712018069232-nt5ajleo5hrfbpsm84774gick0n9oj6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_hrTtMW_Yh0bVmnKNJWx7G8QyK4vN7LE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712018069232-nt5ajleo5hrfbpsm84774gick0n9oj6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

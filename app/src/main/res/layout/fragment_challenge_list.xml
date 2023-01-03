@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.hackerton.jureumuing.ui.main.challenge.list.ChallengeListViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.challenge.list.ChallengeListFragment">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:minWidth="60dp"
+            android:switchTextAppearance="@style/text.small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/button_round"
+            android:gravity="end|center"
+            android:paddingHorizontal="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/spinner_filter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/spinner_filter">
+
+            <EditText
+                android:id="@+id/et_search"
+                style="@style/text.verySmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:autofillHints="@null"
+                android:background="@android:color/transparent"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:maxLines="1"
+                android:padding="3dp"
+                android:text="@={viewModel.searchKeyword}"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/gray" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_search_24dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_mission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="15dp"
+            android:background="@color/bg_ivory"
+            android:elevation="-10dp"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_filter"
+            tools:listitem="@layout/item_mission" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

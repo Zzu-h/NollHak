@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.hackerton.jureumuing.domain.model.Mission" />
+
+        <variable
+            name="listener"
+            type="com.hackerton.jureumuing.ui.main.board.adapter.MissionSummaryRVAdapter.ClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{() -> listener.onItemClick(item)}">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_thumbnail"
+                android:layout_width="140dp"
+                android:layout_height="0dp"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    app:image="@{item.thumbnail}" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@{item.title}"
+                android:textAppearance="@style/text.large.bold"
+                app:layout_constraintStart_toEndOf="@id/cv_thumbnail"
+                app:layout_constraintTop_toTopOf="@id/cv_thumbnail"
+                tools:text="test" />
+
+            <LinearLayout
+                android:id="@+id/ll_first_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/tv_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. "
+                    android:textAppearance="@style/text.small.bold" />
+
+                <TextView
+                    android:id="@+id/tv_first_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Test"
+                    android:textAppearance="@style/text.small.bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_second_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/ll_first_item"
+                app:layout_constraintTop_toBottomOf="@id/ll_first_item">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. "
+                    android:textAppearance="@style/text.small" />
+
+                <TextView
+                    android:id="@+id/tv_second_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Test"
+                    android:textAppearance="@style/text.small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_third_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/ll_second_item"
+                app:layout_constraintTop_toBottomOf="@id/ll_second_item">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3. "
+                    android:textAppearance="@style/text.small" />
+
+                <TextView
+                    android:id="@+id/tv_third_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Test"
+                    android:textAppearance="@style/text.small" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_participate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="참여자: "
+                android:textAppearance="@style/description.medium"
+                app:layout_constraintBottom_toBottomOf="@id/cv_thumbnail"
+                app:layout_constraintEnd_toStartOf="@id/tv_participate_count" />
+
+            <TextView
+                android:id="@+id/tv_participate_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="@{String.valueOf(item.challengeList.size())}"
+                android:textAppearance="@style/description.medium"
+                app:layout_constraintBottom_toBottomOf="@id/cv_thumbnail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_participate"
+                tools:text="5" />
+
+            <ImageView
+                android:id="@+id/iv_like"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_like_selector"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cv_thumbnail" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.hackerton.jureumuing.domain.model.Mission" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.detail.BoardActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_thumbnail"
+                image="@{item.thumbnail}"
+                android:layout_width="140dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test"
+                android:textAppearance="@style/title.large"
+                app:layout_constraintEnd_toStartOf="@id/iv_thumbnail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_thumbnail" />
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                android:text="작성자"
+                android:textAppearance="@style/description.medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="작성자"
+                android:textAppearance="@style/description.medium"
+                app:layout_constraintBottom_toBottomOf="@id/tv_author"
+                app:layout_constraintStart_toEndOf="@id/tv_author"
+                app:layout_constraintTop_toTopOf="@id/tv_author" />
+
+            <TextView
+                android:id="@+id/tv_when"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:text="When"
+                android:textAppearance="@style/text.medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_author" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="2022-02-12"
+                android:textAppearance="@style/text.medium"
+                app:layout_constraintBottom_toBottomOf="@id/tv_when"
+                app:layout_constraintStart_toEndOf="@id/tv_when"
+                app:layout_constraintTop_toTopOf="@id/tv_when" />
+
+            <TextView
+                android:id="@+id/tv_where"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:text="Where"
+                android:textAppearance="@style/text.medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_when" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="인경호"
+                android:textAppearance="@style/text.medium"
+                app:layout_constraintBottom_toBottomOf="@id/tv_where"
+                app:layout_constraintStart_toEndOf="@id/tv_where"
+                app:layout_constraintTop_toTopOf="@id/tv_where" />
+
+            <TextView
+                android:id="@+id/tv_what"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:text="What"
+                android:textAppearance="@style/text.medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_where" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="숨참고 러브다이브"
+                android:textAppearance="@style/text.medium"
+                app:layout_constraintBottom_toBottomOf="@id/tv_what"
+                app:layout_constraintStart_toEndOf="@id/tv_what"
+                app:layout_constraintTop_toTopOf="@id/tv_what" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_board_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_what"
+                tools:listitem="@layout/item_challenge" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

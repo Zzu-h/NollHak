@@ -1,0 +1,25 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navi_challenge_upload"
+    app:startDestination="@id/fragment_challenge_list">
+
+    <fragment
+        android:id="@+id/fragment_challenge_list"
+        android:name="com.hackerton.jureumuing.ui.main.challenge.list.ChallengeListFragment">
+        <action
+            android:id="@+id/action_fragment_challenge_list_to_fragment_challenge_upload"
+            app:destination="@id/fragment_challenge_upload" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_challenge_upload"
+        android:name="com.hackerton.jureumuing.ui.main.challenge.upload.ChallengeUploadFragment">
+        <argument
+            android:name="item"
+            app:argType="com.hackerton.jureumuing.domain.model.Mission" />
+        <action
+            android:id="@+id/action_fragment_challenge_upload_to_fragment_challenge_list"
+            app:destination="@id/fragment_challenge_list" />
+    </fragment>
+
+</navigation>

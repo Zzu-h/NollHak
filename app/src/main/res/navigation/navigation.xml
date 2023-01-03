@@ -1,0 +1,30 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_activity_navgraph"
+    app:startDestination="@id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.hackerton.jureumuing.ui.main.home.HomeFragment"
+        android:label="@string/fragment_home" />
+
+    <fragment
+        android:id="@+id/fragment_board"
+        android:name="com.hackerton.jureumuing.ui.main.board.BoardFragment"
+        android:label="@string/fragment_board" />
+
+    <fragment
+        android:id="@+id/fragment_challenge"
+        android:name="com.hackerton.jureumuing.ui.main.challenge.ChallengeFragment"
+        android:label="@string/fragment_challenge" />
+
+    <fragment
+        android:id="@+id/fragment_chart"
+        android:name="com.hackerton.jureumuing.ui.main.chart.CandidateFragment"
+        android:label="@string/fragment_chart" />
+
+    <fragment
+        android:id="@+id/fragment_profile"
+        android:name="com.hackerton.jureumuing.ui.main.profile.ProfileFragment"
+        android:label="@string/fragment_profile"/>
+</navigation>

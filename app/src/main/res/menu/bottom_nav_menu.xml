@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragment_home"
+        android:icon="@drawable/ic_home_24dp"
+        android:title="@string/fragment_home" />
+
+    <item
+        android:id="@+id/fragment_board"
+        android:icon="@drawable/ic_chat_24dp"
+        android:title="@string/fragment_board" />
+
+    <item
+        android:id="@+id/fragment_challenge"
+        android:title="" />
+
+    <item
+        android:id="@+id/fragment_chart"
+        android:icon="@drawable/ic_chart_24dp"
+        android:title="@string/fragment_chart" />
+
+    <item
+        android:id="@+id/fragment_profile"
+        android:icon="@drawable/ic_person_24dp"
+        android:title="마이페이지" />
+
+</menu>
